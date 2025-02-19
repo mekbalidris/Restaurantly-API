@@ -1,8 +1,11 @@
 const mongoose = require('mongoose');
+require('dotenv').config()
+
+const MONGO_URI = process.env.MONGO_URI
 
 const connectDB = async () => {
     try{
-        await mongoose.connect('mongodb+srv://mekbalidriss:idris2005@backenddb.7c6z7.mongodb.net/Restaurantly-RestAPI')
+        await mongoose.connect(MONGO_URI)
         console.log("connected to MongoDB")
     }catch(err){
         console.log("Failed to connect to MongoDB", err)
