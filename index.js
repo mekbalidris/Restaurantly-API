@@ -8,7 +8,7 @@ require('dotenv').config()
 const app = express();
 app.use(express.json());
 app.use(cors({
-    origin: /https:\/\/restaurantly-.*-idris-projects-88099c98\.vercel\.app/, 
+    origin: "https://restaurantly-one.vercel.app",
     methods: "GET,POST,PUT,DELETE",
     credentials: true
 }));
